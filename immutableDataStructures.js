@@ -51,7 +51,7 @@ console.log('Adicionando item ao Array: ', refeicaoAtualizada)
 // Atualizando item no array (.map)
 const numeros = [1, 2, 3]
 
-function dobrar(num) {
+function dobrar (num) {
   return num * 2
 }
 
@@ -70,11 +70,10 @@ function atualizarDescricao (refeicao) {
 }
 
 const descricaoRefeicoesAtualizadas = refeicaoAtualizada.map(atualizarDescricao)
-
 console.log('Descrição Atualizada:', descricaoRefeicoesAtualizadas)
 
 // Removendo item no array refeicoes (.filter)
-function filtro(refeicao) {
+function filtro (refeicao) {
   if (refeicao.id === 2) {
     return true
   }
@@ -82,3 +81,27 @@ function filtro(refeicao) {
 
 const refeicaoFiltradas = refeicaoAtualizada.filter(filtro)
 console.log('Refeição Filtradas:', refeicaoFiltradas)
+
+//     ----   Consolidando informações em um array   ----       //
+console.log('----   Consolidando informações em um array   ----')
+
+// Somando valores de arrays (.reduce)
+const numeros2 = [1, 2, 3]
+
+function soma (x, y) {
+  return x + y
+}
+
+const somaDosNumeros2 = numeros2.reduce(soma)
+console.log('Soma dos valores de um array:', somaDosNumeros2)
+
+const notas = [60, 55, 80, 90, 99, 92, 75, 72]
+
+function media (acumulado, valorAtual) {
+  return acumulado + valorAtual
+}
+
+const quantidadeDeNotas = notas.length
+
+const mediaDasNotas = notas.reduce(media) / quantidadeDeNotas
+console.log('Média das Notas: ', mediaDasNotas)
